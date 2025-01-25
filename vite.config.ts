@@ -7,7 +7,6 @@ export default defineConfig((configEnv) => {
 
   return {
     plugins: [react()],
-    base: "/bayethelungah.github.io/",
     server: {
       port: 3000,
     },
