@@ -140,8 +140,8 @@ function ProjectSection() {
         <h1 className="text-white text-4xl">Projects</h1>
         <div className="w-2/3 flex justify-center items-center gap-5">
           <Project
-            title="Ecommerce"
-            description="An Ecommerce store"
+            title="Tode Client"
+            description="A website to visualize project depedencies"
             githubUrl="https://github.com/bayethelungah/Ecommerce"
             url=""
             rawTags="Next.js,Typescript,SQL"

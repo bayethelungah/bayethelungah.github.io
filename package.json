@@ -42,7 +42,7 @@
     "preview": "vite preview",
     "postinstall": "husky install",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "homepage": "https://bayethelungah.github.io/react-gh-pages"
   },
   "dependencies": {
