@@ -8,6 +8,13 @@ export default defineConfig((configEnv) => {
   return {
     plugins: [react()],
     base: "/bayethelungah.github.io/",
+    build: {
+      rollupOptions: {
+        input: {
+          main: '/src/main.tsx', 
+        },
+      },
+    },
     server: {
       port: 3000,
     },
