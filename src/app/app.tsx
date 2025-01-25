@@ -27,22 +27,18 @@ const scrollToProjects = () => {
 
 const App = () => {
   useEffect(() => {
-    // Registering the 'begin' event and logging it to the console when triggered.
     //@ts-ignore
     Events.scrollEvent.register("begin", (to, element) => {
       console.log("begin", to, element);
     });
 
-    // Registering the 'end' event and logging it to the console when triggered.
     //@ts-ignore
     Events.scrollEvent.register("end", (to, element) => {
       console.log("end", to, element);
     });
 
-    // Updating scrollSpy when the component mounts.
     scrollSpy.update();
 
-    // Returning a cleanup function to remove the registered events when the component unmounts.
     return () => {
       Events.scrollEvent.remove("begin");
       Events.scrollEvent.remove("end");
@@ -94,7 +90,8 @@ function Hero() {
         new things.
       </motion.p>
 
-      <Button>
+      <Button
+        onClick={() => scrollToProjects()}>
         <div className="flex gap-2 justify-center items-center">
           <p>See Projects</p>
           <ArrowDownIcon className="bounce" style={{ height: "25px" }} />
@@ -115,14 +112,13 @@ function About() {
           <p className="text-white">
             Welcome to my coding realm! I'm Bayethe Lungah (but I go by Tay), a
             dedicated software developer with a fervor for transforming complex
-            problems into elegant solutions. Armed with a solid foundation in
-            Javascript, C#, Java and Python, I thrive in the dynamic world of
+            problems into elegant solutions. Armed with a deep understanding in
+            Javascript, C# and experience in Java and python. I thrive in the dynamic world of
             code. Whether I'm architecting robust systems, debugging intricate
             issues, or exploring the latest in tech trends, I approach each line
-            with precision and passion. With hands-on experience in Next.js,
-            Java Spring and ASP.NET. I'm not just a developer; I'm a problem
+            with precision and passion. I'm not just a developer; I'm a problem
             solver and a tech enthusiast. Let's embark on this coding adventure
-            together, where every challenge is an opportunity to innovate
+            together, where every challenge is an opportunity to innovate!
           </p>
         </Card>
       </div>
@@ -142,23 +138,23 @@ function ProjectSection() {
           <Project
             title="Tode Client"
             description="A website to visualize project depedencies"
-            githubUrl="https://github.com/bayethelungah/Ecommerce"
+            githubUrl="https://github.com/bayethelungah/Tode-Client"
             url=""
-            rawTags="Next.js,Typescript,SQL"
+            rawTags="Vite,Typescript"
           />
           <Project
-            title="Genetic Simulation"
-            description="An simulation of an genetic algorithm"
-            githubUrl=""
+            title="Bioca"
+            description="a genetic algorithm simulation"
+            githubUrl="https://github.com/bayethelungah/Bioca"
             url=""
-            rawTags="Java"
+            rawTags="C++,Raylib"
           />
           <Project
-            title="Chess"
-            description="an application to play chess"
-            githubUrl=""
+            title="Tode Server"
+            description="The background for the Tode client powered by express.js"
+            githubUrl="https://github.com/bayethelungah/Tode-Server"
             url=""
-            rawTags="Typescript,HTML"
+            rawTags="Express.js,Node.js,Typescript"
           />
         </div>
       </main>
