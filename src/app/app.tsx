@@ -86,7 +86,7 @@ function Hero() {
         <a className="underline" href="https://www.fanshawec.ca/">
           Fanshawe College
         </a>
-        . I've haved a strong passion for tech since I was 12 and I love making
+        . I've had a strong passion for tech since I was 12 and I love making
         new things.
       </motion.p>
 
